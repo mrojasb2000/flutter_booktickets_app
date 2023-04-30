@@ -11,12 +11,30 @@ class BottonBar extends StatefulWidget {
 }
 
 class _BottonBarState extends State<BottonBar> {
+  int _selectedIndex = 0;
+  static final List<Widget> _widgetOptions = <Widget>[
+    const Text("Home"),
+    const Text("Search"),
+    const Text("Tickets"),
+    const Text("Profile")
+  ];
+
+  void onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      print('${_selectedIndex}');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("My tickets")),
-      body: const Center(child: Text("My Body")),
+      body: Center(
+        child: _widgetOptions[_selectedIndex],
+      ),
       bottomNavigationBar: BottomNavigationBar(
+          onTap: onItemTapped,
           elevation: 10,
           showSelectedLabels: false,
           showUnselectedLabels: false,
