@@ -30,7 +30,6 @@ class _BottonBarState extends State<BottonBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("My tickets")),
       body: Center(
         child: _widgetOptions[_selectedIndex],
       ),
