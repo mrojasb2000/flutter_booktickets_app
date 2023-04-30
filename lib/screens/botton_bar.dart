@@ -23,7 +23,6 @@ class _BottonBarState extends State<BottonBar> {
   void onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      print('${_selectedIndex}');
     });
   }
 

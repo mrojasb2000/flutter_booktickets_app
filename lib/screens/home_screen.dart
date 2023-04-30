@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:gap/gap.dart';
 
 import '../utils/app_styles.dart';
 
@@ -17,6 +18,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
+                  const Gap(40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -27,6 +29,7 @@ class HomeScreen extends StatelessWidget {
                             "Good morning",
                             style: Styles.headLineStyle3,
                           ),
+                          const Gap(5),
                           Text(
                             "Book Tickets",
                             style: Styles.headLineStyle1,
