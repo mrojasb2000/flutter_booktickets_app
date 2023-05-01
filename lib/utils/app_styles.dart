@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 Color primary = const Color(0xFF678daf);
 
@@ -8,6 +9,8 @@ class Styles {
   static Color bgColor = const Color(0xFFeeedf2);
   static Color orageColor = const Color(0xFFF37B67);
   static Color blueGreyColor = const Color(0xFF526799);
+  static Color randomColor =
+      Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
   static TextStyle textStyle =
       TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);
   static TextStyle headLineStyle1 =
