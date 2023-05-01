@@ -18,9 +18,9 @@ class TicketView extends StatelessWidget {
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           /* showing the blue part of the card/ticket */
           Container(
-            decoration: const BoxDecoration(
-                color: Color(0xFF526799),
-                borderRadius: BorderRadius.only(
+            decoration: BoxDecoration(
+                color: Styles.blueGreyColor,
+                borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(21),
                     topRight: Radius.circular(21))),
             padding: const EdgeInsets.all(16),
@@ -149,7 +149,7 @@ class TicketView extends StatelessWidget {
                 ],
               )),
 
-          /* botton part of the orage card/ticket */
+          /* bottom part of the orage card/ticket */
           Container(
             decoration: BoxDecoration(
                 color: Styles.orageColor,
