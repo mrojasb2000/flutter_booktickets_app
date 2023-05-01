@@ -27,9 +27,7 @@ class TicketView extends StatelessWidget {
             child: Column(children: [
               Row(
                 children: [
-                  Text("NYC",
-                      style:
-                          Styles.headLineStyle3.copyWith(color: Colors.white)),
+                  Text("NYC", style: Styles.headLineStyle3White),
                   Expanded(child: Container()),
                   const ThickContainer(),
                   Expanded(
@@ -68,9 +66,7 @@ class TicketView extends StatelessWidget {
                   )),
                   const ThickContainer(),
                   Expanded(child: Container()),
-                  Text("LDN",
-                      style:
-                          Styles.headLineStyle4.copyWith(color: Colors.white)),
+                  Text("LDN", style: Styles.headLineStyle4White),
                 ],
               ),
               const Gap(5),
@@ -78,16 +74,10 @@ class TicketView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                    child: Text('New-York',
-                        style: Styles.headLineStyle3
-                            .copyWith(color: Colors.white)),
+                    child: Text('New-York', style: Styles.headLineStyle3White),
                   ),
-                  Text('8H 30M',
-                      style:
-                          Styles.headLineStyle3.copyWith(color: Colors.white)),
-                  Text('London',
-                      style:
-                          Styles.headLineStyle3.copyWith(color: Colors.white)),
+                  Text('8H 30M', style: Styles.headLineStyle3White),
+                  Text('London', style: Styles.headLineStyle3White),
                 ],
               )
             ]),
@@ -151,13 +141,46 @@ class TicketView extends StatelessWidget {
 
           /* bottom part of the orage card/ticket */
           Container(
-            decoration: BoxDecoration(
-                color: Styles.orageColor,
-                borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(21),
-                    bottomRight: Radius.circular(21))),
-            padding: const EdgeInsets.all(16),
-          )
+              decoration: BoxDecoration(
+                  color: Styles.orageColor,
+                  borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(21),
+                      bottomRight: Radius.circular(21))),
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("1 May", style: Styles.headLineStyle3White),
+                          const Gap(5),
+                          Text("Date", style: Styles.headLineStyle4White)
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text("08:00 AM", style: Styles.headLineStyle3White),
+                          const Gap(5),
+                          Text("Departure time",
+                              style: Styles.headLineStyle4White)
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text("23", style: Styles.headLineStyle3White),
+                          const Gap(5),
+                          Text("Number", style: Styles.headLineStyle4White)
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ))
         ]),
       ),
     );
