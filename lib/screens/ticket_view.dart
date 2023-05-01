@@ -91,9 +91,8 @@ class TicketView extends StatelessWidget {
                 ],
               )
             ]),
-          )
+          ),
           /* showing the orage part of the card/ticket */
-          ,
           Container(
               color: Styles.orageColor,
               child: Row(
@@ -148,7 +147,17 @@ class TicketView extends StatelessWidget {
                     ),
                   )
                 ],
-              ))
+              )),
+
+          /* botton part of the orage card/ticket */
+          Container(
+            decoration: BoxDecoration(
+                color: Styles.orageColor,
+                borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(21),
+                    bottomRight: Radius.circular(21))),
+            padding: const EdgeInsets.all(16),
+          )
         ]),
       ),
     );
