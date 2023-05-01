@@ -110,7 +110,29 @@ class TicketView extends StatelessWidget {
                           )),
                     ),
                   ),
-                  Expanded(child: Container()),
+                  Expanded(
+                    child: SizedBox(
+                        height: 24,
+                        child: LayoutBuilder(
+                          builder: (BuildContext context,
+                              BoxConstraints constraints) {
+                            return Flex(
+                              direction: Axis.horizontal,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: List.generate(
+                                (constraints.constrainWidth() / 6).floor(),
+                                (index) => const SizedBox(
+                                  width: 3,
+                                  height: 1,
+                                  child: DecoratedBox(
+                                      decoration:
+                                          BoxDecoration(color: Colors.white)),
+                                ),
+                              ),
+                            );
+                          },
+                        )),
+                  ),
                   const SizedBox(
                     height: 20,
                     width: 10,
