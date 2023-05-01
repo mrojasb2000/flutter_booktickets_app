@@ -111,27 +111,29 @@ class TicketView extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: SizedBox(
-                        height: 24,
-                        child: LayoutBuilder(
-                          builder: (BuildContext context,
-                              BoxConstraints constraints) {
-                            return Flex(
-                              direction: Axis.horizontal,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: List.generate(
-                                (constraints.constrainWidth() / 15).floor(),
-                                (index) => const SizedBox(
-                                  width: 3,
-                                  height: 1,
-                                  child: DecoratedBox(
-                                      decoration:
-                                          BoxDecoration(color: Colors.white)),
-                                ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: LayoutBuilder(
+                        builder:
+                            (BuildContext context, BoxConstraints constraints) {
+                          return Flex(
+                            direction: Axis.horizontal,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisSize: MainAxisSize.max,
+                            children: List.generate(
+                              (constraints.constrainWidth() / 15).floor(),
+                              (index) => const SizedBox(
+                                width: 5,
+                                height: 1,
+                                child: DecoratedBox(
+                                    decoration:
+                                        BoxDecoration(color: Colors.white)),
                               ),
-                            );
-                          },
-                        )),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 20,
