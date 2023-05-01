@@ -120,7 +120,7 @@ class TicketView extends StatelessWidget {
                               direction: Axis.horizontal,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: List.generate(
-                                (constraints.constrainWidth() / 6).floor(),
+                                (constraints.constrainWidth() / 15).floor(),
                                 (index) => const SizedBox(
                                   width: 3,
                                   height: 1,
