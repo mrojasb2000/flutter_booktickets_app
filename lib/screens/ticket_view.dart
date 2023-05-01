@@ -170,7 +170,7 @@ class TicketView extends StatelessWidget {
                         ],
                       ),
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text("23", style: Styles.headLineStyle3White),
                           const Gap(5),
