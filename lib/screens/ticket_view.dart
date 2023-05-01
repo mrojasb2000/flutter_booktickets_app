@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_booktickets_app/utils/app_layout.dart';
-import 'package:gap/gap.dart';
 import '../utils/app_styles.dart';
 import '../widgets/thick_container.dart';
 
@@ -33,7 +31,9 @@ class TicketView extends StatelessWidget {
                   Expanded(child: Container()),
                   const ThickContainer(),
                   Expanded(
-                      child: SizedBox(
+                      child: Stack(
+                    children: [
+                      SizedBox(
                           height: 24,
                           child: LayoutBuilder(
                             builder: (BuildContext context,
@@ -54,15 +54,33 @@ class TicketView extends StatelessWidget {
                                 ),
                               );
                             },
-                          ))),
-                  Transform.rotate(
-                    angle: 1.5,
-                    child: const Icon(Icons.local_airport_rounded,
-                        color: Colors.white),
-                  ),
+                          )),
+                      Center(
+                        child: Transform.rotate(
+                          angle: 1.5,
+                          child: const Icon(Icons.local_airport_rounded,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  )),
                   const ThickContainer(),
                   Expanded(child: Container()),
                   Text("LDN",
+                      style:
+                          Styles.headLineStyle4.copyWith(color: Colors.white)),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 100,
+                    child: Text('New-York',
+                        style: Styles.headLineStyle3
+                            .copyWith(color: Colors.white)),
+                  ),
+                  Text('8H 30M',
                       style:
                           Styles.headLineStyle3.copyWith(color: Colors.white)),
                 ],
