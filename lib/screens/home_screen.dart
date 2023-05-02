@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_booktickets_app/screens/hotel_screen.dart';
 import 'package:flutter_booktickets_app/screens/ticket_view.dart';
 import 'package:gap/gap.dart';
 
@@ -115,7 +116,15 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            const Gap(15),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(children: const [
+                HotelScreen(),
+                HotelScreen(),
+              ]),
+            ),
           ],
         ));
   }
