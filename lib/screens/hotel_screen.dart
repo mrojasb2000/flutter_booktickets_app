@@ -37,7 +37,7 @@ class HotelScreen extends StatelessWidget {
                     fit: BoxFit.cover,
                     image: AssetImage("assets/images/one.png"))),
           ),
-          const Gap(10),
+          const Gap(14),
           Text("Open space", style: Styles.headLineStyle2Kaki),
           const Gap(5),
           Text("London", style: Styles.headLineStyle3White),
