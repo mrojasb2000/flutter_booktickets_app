@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_booktickets_app/utils/app_layout.dart';
 import 'package:flutter_booktickets_app/utils/app_styles.dart';
+import 'package:gap/gap.dart';
 
 class HotelScreen extends StatelessWidget {
   const HotelScreen({super.key});
@@ -20,8 +21,8 @@ class HotelScreen extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Colors.grey.shade200,
-              blurRadius: 2,
-              spreadRadius: 1,
+              blurRadius: 20,
+              spreadRadius: 5,
             )
           ]),
       child: Column(
@@ -35,7 +36,13 @@ class HotelScreen extends StatelessWidget {
                 image: const DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage("assets/images/one.png"))),
-          )
+          ),
+          const Gap(10),
+          Text("Open space", style: Styles.headLineStyle2Kaki),
+          const Gap(5),
+          Text("London", style: Styles.headLineStyle3White),
+          const Gap(8),
+          Text("\$40/night", style: Styles.headLineStyle1Kaki),
         ],
       ),
     );
