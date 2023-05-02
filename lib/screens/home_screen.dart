@@ -5,6 +5,7 @@ import 'package:flutter_booktickets_app/screens/ticket_view.dart';
 import 'package:flutter_booktickets_app/utils/app_info_list.dart';
 import 'package:gap/gap.dart';
 
+import '../utils/app_layout.dart';
 import '../utils/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -39,8 +40,8 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       Container(
-                        height: 50,
-                        width: 50,
+                        height: AppLayout.getHeight(50),
+                        width: AppLayout.getWidth(50),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: const DecorationImage(
