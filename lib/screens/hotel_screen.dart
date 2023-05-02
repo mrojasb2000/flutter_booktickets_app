@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_booktickets_app/utils/app_layout.dart';
 import 'package:flutter_booktickets_app/utils/app_styles.dart';
 
@@ -12,6 +13,17 @@ class HotelScreen extends StatelessWidget {
       width: size.width * 0.6,
       height: 350,
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
+      margin: const EdgeInsets.only(right: 17, top: 5),
+      decoration: BoxDecoration(
+          color: Styles.blueGreyColor,
+          borderRadius: BorderRadius.circular(24),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade200,
+              blurRadius: 2,
+              spreadRadius: 1,
+            )
+          ]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
