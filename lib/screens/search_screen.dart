@@ -22,6 +22,7 @@ class SearchScreen extends StatelessWidget {
                       .copyWith(fontSize: AppLayout.getHeight(35))),
               Gap(AppLayout.getHeight(20)),
               Container(
+                padding: const EdgeInsets.all(3.5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
                   color: const Color(0xFFF4F6FD),
@@ -33,11 +34,13 @@ class SearchScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(
                           vertical: AppLayout.getHeight(7)),
                       decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.circular(AppLayout.getHeight(50)),
+                        borderRadius: BorderRadius.horizontal(
+                            left: Radius.circular(AppLayout.getHeight(50))),
                         color: Colors.white,
                       ),
-                      child: const Text("Airline tickets"),
+                      child: const Center(
+                        child: Text("Airline tickets"),
+                      ),
                     ),
                   ],
                 ),
